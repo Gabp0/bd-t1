@@ -1,0 +1,110 @@
+Hammerdb Log @ Sun Nov 12 17:08:08 -03 2023
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+Timestamp 1 @ Sun Nov 12 17:08:25 -03 2023
+Vuser 1:New Sales refresh
+Timestamp 1 @ Sun Nov 12 17:08:45 -03 2023
+Vuser 1:New Sales refresh complete in 20.124 seconds
+Timestamp 1 @ Sun Nov 12 17:08:45 -03 2023
+Vuser 1:Completed 1 update set(s)
+Timestamp 1 @ Sun Nov 12 17:08:45 -03 2023
+Vuser 1:Verifying the scale factor of the existing schema...
+Timestamp 1 @ Sun Nov 12 17:08:45 -03 2023
+Vuser 1:Executing Query 14 (1 of 22)
+Timestamp 1 @ Sun Nov 12 17:08:51 -03 2023
+Vuser 1:query 14 completed in 6.345 seconds
+Timestamp 1 @ Sun Nov 12 17:08:51 -03 2023
+Vuser 1:Executing Query 2 (2 of 22)
+Timestamp 1 @ Sun Nov 12 17:08:53 -03 2023
+Vuser 1:query 2 completed in 1.642 seconds
+Timestamp 1 @ Sun Nov 12 17:08:53 -03 2023
+Vuser 1:Executing Query 9 (3 of 22)
+Timestamp 1 @ Sun Nov 12 17:08:57 -03 2023
+Vuser 1:query 9 completed in 4.133 seconds
+Timestamp 1 @ Sun Nov 12 17:08:57 -03 2023
+Vuser 1:Executing Query 20 (4 of 22)
+Timestamp 1 @ Sun Nov 12 17:08:59 -03 2023
+Vuser 1:query 20 completed in 1.676 seconds
+Timestamp 1 @ Sun Nov 12 17:08:59 -03 2023
+Vuser 1:Executing Query 6 (5 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:00 -03 2023
+Vuser 1:query 6 completed in 0.746 seconds
+Timestamp 1 @ Sun Nov 12 17:09:00 -03 2023
+Vuser 1:Executing Query 17 (6 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:02 -03 2023
+Vuser 1:query 17 completed in 2.346 seconds
+Timestamp 1 @ Sun Nov 12 17:09:02 -03 2023
+Vuser 1:Executing Query 18 (7 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:08 -03 2023
+Vuser 1:query 18 completed in 5.964 seconds
+Timestamp 1 @ Sun Nov 12 17:09:08 -03 2023
+Vuser 1:Executing Query 8 (8 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:08 -03 2023
+Vuser 1:Query Failed : select o_year, sum(case when nation = 'KENYA' then volume else 0 end) / sum(volume) as mkt_share from ( select extract(year from o_orderdate) as o_year, l_extendedprice * (1 - l_discount) as volume, n2.n_name as nation from part, supplier, lineitem, orders, customer, nation n1, nation n2, region where p_partkey = l_partkey and s_suppkey = l_suppkey and l_orderkey = o_orderkey and o_custkey = c_custkey and c_nationkey = n1.n_nationkey and n1.n_regionkey = r_regionkey and r_name = 'AFRICA' and s_nationkey = n2.n_nationkey and o_orderdate between date '1995-01-01' and date '1996-12-31' and p_type = 'SMALL PLATED TIN') all_nations group by o_year order by o_year : ERROR: no unpinned buffers available
+Timestamp 1 @ Sun Nov 12 17:09:08 -03 2023
+Vuser 1:query 8 completed in 0.122 seconds
+Timestamp 1 @ Sun Nov 12 17:09:08 -03 2023
+Vuser 1:Executing Query 21 (9 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:09 -03 2023
+Vuser 1:query 21 completed in 1.051 seconds
+Timestamp 1 @ Sun Nov 12 17:09:09 -03 2023
+Vuser 1:Executing Query 13 (10 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:12 -03 2023
+Vuser 1:query 13 completed in 3.207 seconds
+Timestamp 1 @ Sun Nov 12 17:09:12 -03 2023
+Vuser 1:Executing Query 3 (11 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:13 -03 2023
+Vuser 1:query 3 completed in 0.926 seconds
+Timestamp 1 @ Sun Nov 12 17:09:13 -03 2023
+Vuser 1:Executing Query 22 (12 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:14 -03 2023
+Vuser 1:query 22 completed in 0.107 seconds
+Timestamp 1 @ Sun Nov 12 17:09:14 -03 2023
+Vuser 1:Executing Query 16 (13 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:15 -03 2023
+Vuser 1:query 16 completed in 1.781 seconds
+Timestamp 1 @ Sun Nov 12 17:09:15 -03 2023
+Vuser 1:Executing Query 4 (14 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:16 -03 2023
+Vuser 1:query 4 completed in 0.27 seconds
+Timestamp 1 @ Sun Nov 12 17:09:16 -03 2023
+Vuser 1:Executing Query 11 (15 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:16 -03 2023
+Vuser 1:query 11 completed in 0.396 seconds
+Timestamp 1 @ Sun Nov 12 17:09:16 -03 2023
+Vuser 1:Executing Query 15 (16 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:19 -03 2023
+Vuser 1:query 15 completed in 3.173 seconds
+Timestamp 1 @ Sun Nov 12 17:09:19 -03 2023
+Vuser 1:Executing Query 1 (17 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:22 -03 2023
+Vuser 1:query 1 completed in 2.913 seconds
+Timestamp 1 @ Sun Nov 12 17:09:22 -03 2023
+Vuser 1:Executing Query 10 (18 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:25 -03 2023
+Vuser 1:query 10 completed in 2.839 seconds
+Timestamp 1 @ Sun Nov 12 17:09:25 -03 2023
+Vuser 1:Executing Query 19 (19 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:26 -03 2023
+Vuser 1:query 19 completed in 0.64 seconds
+Timestamp 1 @ Sun Nov 12 17:09:26 -03 2023
+Vuser 1:Executing Query 5 (20 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:28 -03 2023
+Vuser 1:query 5 completed in 2.246 seconds
+Timestamp 1 @ Sun Nov 12 17:09:28 -03 2023
+Vuser 1:Executing Query 7 (21 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:29 -03 2023
+Vuser 1:query 7 completed in 0.809 seconds
+Timestamp 1 @ Sun Nov 12 17:09:29 -03 2023
+Vuser 1:Executing Query 12 (22 of 22)
+Timestamp 1 @ Sun Nov 12 17:09:30 -03 2023
+Vuser 1:query 12 completed in 0.75 seconds
+Timestamp 1 @ Sun Nov 12 17:09:30 -03 2023
+Vuser 1:Completed 1 query set(s) in 45 seconds
+Timestamp 1 @ Sun Nov 12 17:09:30 -03 2023
+Vuser 1:Geometric mean of query times returning rows (21) is 1.39559
+Timestamp 1 @ Sun Nov 12 17:09:30 -03 2023
+Vuser 1:Old Sales refresh
+Timestamp 1 @ Sun Nov 12 17:09:31 -03 2023
+Vuser 1:Old Sales refresh complete in 0.946 seconds
+Timestamp 1 @ Sun Nov 12 17:09:31 -03 2023
+Vuser 1:Completed 1 update set(s)
